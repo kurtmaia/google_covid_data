@@ -1,0 +1,6 @@
+textract
+pdfplumber
+numpy
+pandas
+tqdm
+pycountry
