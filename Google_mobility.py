@@ -37,7 +37,7 @@ countries = ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola',
 
 if __name__ == '__main__':
     dates = []
-    for month in range(3,4):
+    for month in range(1,5):
         for d in tqdm(range(1,32)):
             fullday = "2020-{:02d}-{:02d}".format(month,d)
             if havedata(fullday):
@@ -45,8 +45,8 @@ if __name__ == '__main__':
                 dates.append(fullday)
 
     countryLevel, regionLevel = get_google_data(countries,dates)
-    countryLevel.to_csv("countryLevel.csv")
-    regionLevel.to_csv("regionLevel.csv")
+    countryLevel.to_csv("countryLevel.csv", index=False)
+    regionLevel.to_csv("regionLevel.csv", index=False)
 
 
 
